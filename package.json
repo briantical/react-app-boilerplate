@@ -21,13 +21,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --max-warnings 0"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules":{
+      "no-unused-vars":"error",
+      "no-console": "error",
+      "camelcase": "error",
+      "no-duplicate-imports": "error"
+    }
   },
   "browserslist": {
     "production": [
